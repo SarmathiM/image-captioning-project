@@ -1,15 +1,56 @@
 # Image Captioning AI
 
+This is a simple AI-based web application that generates captions for images using computer vision and natural language processing.
+
+---
+
+## Technologies Used
+
+* Python
+* Flask
+* TensorFlow / Keras
+* NumPy
+* Pillow
+* gTTS
+
+---
+
+## Algorithm Used
+
+* CNN (ResNet50) for feature extraction
+* RNN / Deep Learning model for caption generation
+* Text-to-Speech (gTTS) for audio output
+
+---
+
 ## Features
 
-- Drag & Drop Upload
-- Image Preview
-- Caption Generation
-- Voice Output
-- Dark Mode
-- Loading Spinner
+* Image Upload
+* Image Preview
+* Caption Generation
+* Voice Output
+* Dark Mode
+* Loading Indicator
 
-## Run
+---
 
+## How to Run
+
+Install dependencies:
 pip install -r requirements.txt
+
+Run application:
 python app.py
+
+Open browser:
+http://127.0.0.1:5000/
+
+---
+
+## Note
+
+* Model files (.h5, .pkl) should be placed inside the `model/` folder.
+* The app runs locally on your system.
+
+---
+
