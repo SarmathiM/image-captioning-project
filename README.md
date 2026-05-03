@@ -2,7 +2,6 @@
 
 This is a simple AI-based web application that generates captions for images using computer vision and natural language processing.
 
----
 
 ## Technologies Used
 
@@ -13,7 +12,6 @@ This is a simple AI-based web application that generates captions for images usi
 * Pillow
 * gTTS
 
----
 
 ## Algorithm Used
 
@@ -21,7 +19,7 @@ This is a simple AI-based web application that generates captions for images usi
 * RNN / Deep Learning model for caption generation
 * Text-to-Speech (gTTS) for audio output
 
----
+
 
 ## Features
 
@@ -32,7 +30,7 @@ This is a simple AI-based web application that generates captions for images usi
 * Dark Mode
 * Loading Indicator
 
----
+
 
 ## How to Run
 
@@ -44,13 +42,4 @@ python app.py
 
 Open browser:
 http://127.0.0.1:5000/
-
----
-
-## Note
-
-* Model files (.h5, .pkl) should be placed inside the `model/` folder.
-* The app runs locally on your system.
-
----
 
