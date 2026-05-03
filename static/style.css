@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+  color: white;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  padding: 30px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* UPLOAD BOX */
+.upload-box {
+  border: 2px dashed white;
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* FILE INPUT */
+.upload-box input {
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* IMAGE PREVIEW (FIXED PROPERLY) */
+.upload-box img {
+  max-width: 100%;
+  margin-top: 15px;
+  display: block; /* ✅ keeps image visible always */
+  border-radius: 10px;
+}
+
+/* SPACE */
+.space {
+  height: 20px;
+}
+
+/* BUTTON */
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #111;
+  color: white;
+  cursor: pointer;
+}
+
+/* LOADER */
+#loader {
+  display: none;
+  margin-top: 15px;
+}
+
+/* RESULT */
+.result-area {
+  margin-top: 25px;
+  min-height: 120px;
+}
+
+.result {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+/* DARK MODE */
+.dark-mode {
+  background: #0d0d0d;
+}
+
+.dark-mode .upload-box {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .result {
+  background: rgba(255, 255, 255, 0.1);
+}

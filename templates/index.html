@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AI Image Captioning</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <div class="header">
+        <h1>🧠 AI Image Captioning</h1>
+        <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+      </div>
+
+      <!-- UPLOAD SECTION -->
+      <div class="upload-section">
+        <form
+          method="POST"
+          enctype="multipart/form-data"
+          onsubmit="return showLoader();"
+        >
+          <!-- UPLOAD BOX -->
+          <div class="upload-box" id="dropArea">
+            <p>📂 Drag & Drop Image Here</p>
+
+            <!-- FILE INPUT -->
+            <input
+              type="file"
+              name="image"
+              id="fileInput"
+              onchange="previewImage(event)"
+              required
+            />
+
+            <small>or click above to choose file</small>
+
+            <!-- IMAGE PREVIEW (FIXED) -->
+            <img
+              id="preview"
+              {%
+              if
+              image_url
+              %}
+              src="{{ image_url }}"
+              style="display: block"
+              {%
+              else
+              %}
+              style="display: none"
+              {%
+              endif
+              %}
+            />
+          </div>
+
+          <div class="space"></div>
+
+          <button class="btn">Generate Caption 🚀</button>
+        </form>
+      </div>
+
+      <!-- LOADER -->
+      <div id="loader">⏳ Analyzing Image...</div>
+
+      <!-- RESULT -->
+      <div class="result-area">
+        {% if caption %}
+        <div class="result">
+          <h2>Generated Caption</h2>
+          <p>{{ caption }}</p>
+
+          {% if audio %}
+          <audio controls autoplay>
+            <source src="{{ audio }}" type="audio/mp3" />
+          </audio>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
